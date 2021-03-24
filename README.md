@@ -110,7 +110,7 @@ experienced mass bleaching.
 
 ## Setup
 
-*Part A Data and scripts for Remote sensing and GIS practical*
+**Data and scripts for practical**
 
 -   Download GitHub project:
     -   <https://github.com/amysw13/Remote_sensing_GIS_coral_bleaching.git>
@@ -119,48 +119,70 @@ experienced mass bleaching.
         -   **Right click on downloaded file and extract/uncompress file
             (though you can navigate in the compress file on Windows,
             the files will not function correctly).**
+        -   The folder contains all the scripts and example data files.
+            Do not use these example data files to complete your
+            assignment.
 
-*Important presentation:*
-[“Mapping\_temperature\_anomalies”](https://amysw13.github.io/Remote_sensing_GIS_coral_bleaching/Mapping_temperature_anomalies_xar.html#1)
+**Important presentations:**
 
-The folder contains all the scripts and example data files. Do not use
-these example data files to complete your assignment.
+1.  Presentation A
+    [“Mapping\_temperature\_anomalies”](https://amysw13.github.io/Remote_sensing_GIS_coral_bleaching/Mapping_temperature_anomalies_xar.html#1)
 
--   Steps for data retrieval from GIOVANNI website for a sea surface
-    temperature average data map:
+2.  Presentation B
+    ["Bleaching\_analysis](https://amysw13.github.io/Remote_sensing_GIS_coral_bleaching/Bleaching_analysis_xar.html#1)
 
-Log in. Type “sea surface temperature” in the search bar.
+### Downloading data from GIOVANNI
 
-The best resolution (4km cells) could be large. Try it; if that fails go
-to 8km. “Sea Surface temperature at 4 micron (Night), Monthly data.”
+Go to the [GIOVANNI webpage](https://giovanni.gsfc.nasa.gov/giovanni/)
 
-Choose the whole date range available, if this is too much subset to the
-last 10 years of data (if all fails the 2002 to 2021 data set is in the
-github folder). - Please attempt this step as it reflects the time taken
-to download large scale and temporal data.
+**Data download for Part A**
 
-Make sure you get a Time Average (left hand side drop down). Note that
-this data is only available from 2002.
+Long-term averaged sea surface temperature
 
-Change the area of the world to an Equator (coral reef area) focus. This
-will open the lat/long so you can restrict it specifically to be a
-smaller area e.g., -180, -35, 180, 35.
+1.  Create a register an &gt; log in
 
-Press “Plot data”, then wait. It will take some time to process so go
-get a brew. Look at the data created. It will automatically move to a
-“Data Visualization” tab.
+2.  Under “Select Plot”, select “Time Averaged Map”
 
-Click on Downloads in the LEFT-hand list. Choose the “netCDF” format.
+3.  Type “sea surface temperature” in the search bar.
 
-If this fails download the 10-year averaged sea surface temperature data
-from the github folder.
+4.  A list of sea surface temperature variables will appear. Select “Sea
+    Surface temperature at 4 micron (Night), Monthly data.” *Note: The
+    best resolution (4km cells) could be large. Try it; if that fails go
+    to 9km.*
 
-Now chose a year time frame that a mass bleaching occurred. Download a
-map of mean temperature for the year of the mass bleaching event using
-the instructions from steps 3 to 8.
+5.  Choose the whole date range available, if this is too much subset to
+    the last 10 years of data (if all fails the 2002 to 2021 data set is
+    in the github folder). **Please attempt this step as it reflects the
+    time taken to download large scale and temporal data.**
 
-Note: You will need to justify your selection of date range (calendar
-year, year centred on bleaching event, month, etc.).
+6.  Change the area of the world to an Equator (coral reef area) focus
+    in “Select Region”.
+
+-   e.g., -180, -35, 180, 35
+
+1.  Press “Plot data”, then wait. It will take some time to process so
+    go get a brew. Look at the data created. It will automatically move
+    to a “Data Visualization” tab.
+
+2.  Click on Downloads in the **left-hand list**. Choose the “netCDF”
+    format.
+
+*If this all fails use the long term averaged sea surface temperature
+data in the data folder.*
+
+Year averaged sea surface temperature
+
+-   Now chose a year time frame that a mass bleaching occurred.
+
+-   Download a map of mean temperature for the year of the mass
+    bleaching event using the instructions from steps 3 to 8 above.
+
+**Note: You will need to justify your selection of date range (calendar
+year, year centred on bleaching event, month, etc.).**
+
+### Data analyses
+
+**Part A**
 
 Load both maps into your software of choice (a partial R script is
 provided on github, but you are free to use the GIS software of your
@@ -197,18 +219,20 @@ month,…)
 
 Part A in Qgis is also available: Instruction
 
-Part A write up - Produce and present a map of temperature deviations
-from the long-term average with appropriate caption, which includes the
-key findings and interpretation of the figure. Discuss why the location
-of the mass-bleaching event can or cannot be identified on a map of
-temperature deviations from the long-term average. This discussion
-should include reference to the biological process of thermally induced
-coral bleaching, the calculation process (temporal resolution,
-comparison to integrated anomaly calculations, averaging across years by
-month) and limitation of remote sensing. Discuss the presence of
-potential local temperature refugia. This discussion should integrate
-oceanography concepts, including local predominant currents. This
-section should be around 600 words.
+Part A write up -
+
+Produce and present a map of temperature deviations from the long-term
+average with appropriate caption, which includes the key findings and
+interpretation of the figure. Discuss why the location of the
+mass-bleaching event can or cannot be identified on a map of temperature
+deviations from the long-term average. This discussion should include
+reference to the biological process of thermally induced coral
+bleaching, the calculation process (temporal resolution, comparison to
+integrated anomaly calculations, averaging across years by month) and
+limitation of remote sensing. Discuss the presence of potential local
+temperature refugia. This discussion should integrate oceanography
+concepts, including local predominant currents. This section should be
+around 600 words.
 
 ## Part B: Spatial and temporal trends in sea surface temperature anomalies as it relates to a mass bleaching event.
 
@@ -216,7 +240,7 @@ Coral-bleaching susceptibility linked to the variability of the system
 (Donner 2011, Oliver & Palumbi 2011) and degree of exposure to
 environmental anomalies (Maina et al. 2008, 2011, Donner 2011).
 
-Objectives:
+**Objectives:**
 
 • Identify three mass-bleaching sites and three associated (not
 bleached) reference sites.
@@ -226,10 +250,6 @@ bleached) reference sites.
 • Compare sites based on these anomalies.
 
 • Observe temporal trends in these anomalies.
-
-Part B Presentation - how to load Giovani time series data of 6
-different sites (3 bleached coral reef datasets and 3 reference
-unbleached coral reef datasets)
 
 Steps for data retrieval:
 
@@ -252,27 +272,27 @@ Steps for data retrieval:
 1.  In Select Plot, choose: Time Series: Area Averaged (Note: slightly
     different from Part A)
 
-c. Select a suitable sea surface temperature layer. Note: the smaller
-area can allow you or may require you to select a higher spatial
-resolution.
+2.  Select a suitable sea surface temperature layer. Note: the smaller
+    area can allow you or may require you to select a higher spatial
+    resolution.
 
-d. Select the beginning and end date so as to capture the longest time
-series available.
+3.  Select the beginning and end date so as to capture the longest time
+    series available.
 
-1.  Constrain the map to a 0.5 degree longitude and 0.5 degree latitude
+4.  Constrain the map to a 0.5 degree longitude and 0.5 degree latitude
     area centred on your first selected location (Caution: does a 1
     degree by 1 degree cell cover the same area everywhere on the
     planet?)
 
-f. Click “Plot Data” g. Select the Download tab and download the CSV
-file (you may need to right click and “Save file as…”).
+5.  Click “Plot Data” g. Select the Download tab and download the CSV
+    file (you may need to right click and “Save file as…”).
 
-1.  Open the .csv file and add a column with the header “Site” and to
+6.  Open the .csv file and add a column with the header “Site” and to
     which you add the name of the 3 sites to all cells in the column.
     Add a second column with the header “Bleached” and to which you the
     values of TRUE or FALSE.
 
-2.  Repeat this process until you have the data you need for all 6
+7.  Repeat this process until you have the data you need for all 6
     timeseries.
 
 HINT: You can open a window for each site to simultaneously download all
@@ -285,7 +305,7 @@ of annualized anomalies are provided in “Part\_B\_time\_anomaly.R”. A
 “monthly anomaly” can be calculated as the value for any particular
 month (for any particular year) minus the typical average for all years.
 Firstly calculate the average value for each month across all years,
-i.e. xi2004−2014 , where i is the month January, February etc. Once you
+i.e. xi2004−2014 , where i is the month January, February etc. Once you
 have done this, you can calculate the anomaly for each month throughout
 your data set. Monthly anomaly= xi − xi2004−2014 \[2\]
 
@@ -348,7 +368,7 @@ differences between bleached and unbleached sites (\~600 words). 3. a
 discussion of how management strategies may use such information and its
 strengths and weaknesses (\~600 words).
 
-Upload to Faser by Friday (week 32) 7th May 4pm 2021.
+**Upload to Faser by Friday (week 32) 7th May 4pm 2021.**
 
 ## Acknowledgements:
 
