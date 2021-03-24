@@ -1,0 +1,239 @@
+---
+title: "Bleaching analysis"
+subtitle: "Timeseries analysis of temperature anomalies across sites"
+author: "Amy Sing Wong"
+institute: "BS711 Sateliite & GIS analysis"
+date: "23/03/2021"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["xaringan-themer.css"]
+    nature:
+      ratio: '16:9'
+      highlightStyle: style_duo_accent
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+## Part B: Coral bleaching analysis 
+
+- RStudio housekeeping
+
+- Creating function for GIVOANNI timeseries data
+  - loading
+  - reading a list of files
+  - combining all datasets into one dataframe
+  
+- Exploring and Inspecting data
+  - Creating a exploratory plot
+  - Checking data appears as expected
+  
+- Calculating temperature anomalies
+  - monthly
+  - yearly
+  
+- Plotting temperature anomalies
+  - comparing all sites 
+    - bleached vs. non-bleached reefs 
+
+---
+
+## Housekeeping
+
+- Clearing the global environment
+- Loading required packages 
+- Setting theme for all plots (optional - you may want to edit plots separately)
+
+```{r message=FALSE}
+
+rm(list=ls()) 
+
+if(!require(dplyr)){install.packages("dplyr"); library(dplyr)}
+if(!require(ggplot2)){install.packages("ggplot2"); library(ggplot2)}
+if(!require(tidyr)){install.packages("tidyr"); library(tidyr)}
+if(!require(scales)){install.packages("scales"); library(scales)}
+if(!require(patchwork)){install.packages("patchwork"); library(patchwork)}
+if(!require(reshape)){install.packages("reshape"); library(reshape)}
+if(!require(lubridate)){install.packages("lubridate"); library(lubridate)}
+
+#theme_set(theme_bw())
+```
+
+---
+
+class: inverse, middle, center
+
+# The GIOVANNI timeseries data 
+
+---
+
+## Function for loading GIOVANNI time series data
+
+
+```{r}
+load_giovanni_time <- function(path){
+  #reading .csv, skipping first 6 lines and selecting cols
+  file_data <- read.csv(path, 
+                          skip=6,
+                          col.names = c("Date",
+                                        "Temperature",
+                                        "NA",
+                                        "Site",
+                                        "Bleached"))
+  
+  #formatting date 
+  file_data$Date <- parse_date_time(file_data$Date, orders="ymdHMS")
+  
+  return(file_data)
+}
+```
+
+---
+
+## Create a list of timeseries files
+
+- This is preparation for reading in multiple files
+
+```{r}
+#creating a vector of file names in "timeseries" folder 
+file.list <- list.files("./Data/timeseries/")
+
+#creating a list of files from "timeseries" folder
+file.list <- as.list(paste0("./Data/timeseries/", file.list))
+```
+
+---
+
+## Load all the files
+
+- **lapply** applies the function across the list created and creates a new list
+- combining all the data from the list as a single dataframe
+
+```{r}
+all_data <- lapply(X=file.list,
+                         FUN=load_giovanni_time)
+
+
+all_data <- as.data.frame(do.call(rbind, all_data))
+```
+
+---
+
+class: inverse, middle, center
+
+# Exploring and inspecting the data
+
+---
+
+## Inspect the data with a plot
+
+
+```{r fig.height = 4 , fig.width = 8}
+p <- qplot(data=all_data,
+           x=Date,
+           y=Temperature,
+           colour=Site,
+           linetype=Bleached,
+           geom="line")
+print(p)
+```
+
+---
+
+## Sanity check and error removal
+
+```{r}
+summary(all_data)
+```
+
+---
+
+class: inverse, middle, center
+
+# Calculating temperature anomalies
+
+---
+
+## Extract month and year
+
+```{r}
+all_data$Year <- year(all_data$Date)
+
+all_data$month <- month(all_data$Date)
+```
+
+---
+
+## Calculate monthly anomaly
+
+```{r}
+monthly_anomaly <- group_by(all_data,
+                            month,
+                            Site,
+                            Bleached) %>%
+  mutate(mm_Temperature=mean(Temperature),
+         ma_Temperature=Temperature-mean(Temperature))
+```
+
+---
+
+## Calculate yearly anomaly
+
+```{r message=FALSE}
+annual_integrated_anomaly <- group_by(monthly_anomaly,
+                                      Year,
+                                      Site,
+                                      Bleached) %>%
+  summarise(aia_Temperature=sum(abs(ma_Temperature)))
+```
+
+---
+
+## Inspect the data with a plot
+
+```{r fig.height = 4 , fig.width = 8}
+
+p <- qplot(data=annual_integrated_anomaly,
+           x=Site,
+           xlab="x axis label",
+           y=aia_Temperature,
+           ylab="y axis label",
+           colour=Bleached,
+           geom="boxplot")
+print(p)
+```
+
+---
+
+## Save plot
+
+- Choose your preferred method for saving
+
+```{r}
+ggsave("./Plots/Example_bleach_boxplot.png", p, 
+       bg = "transparent", width = 17, height = 12, 
+       units =  "cm", dpi = 300)
+```
+
+---
+
+## Save file
+
+
+```{r}
+#for plotting or analysis in other software
+write.csv(annual_integrated_anomaly,
+     file="./Output/annual_integrated_anomaly.csv")
+```
+
+---
+
+## Next steps
+
+- Here need to check the code and report for the statistical analysis required here to check between sites  and  reefs bleached vs. non.bleached 
+
+Plotting and statistical analysis to determine if bleaching years are different from years in which no bleaching is reported and if site where bleaching is reported are different from sites were bleaching is not reported
+
+
+- Find code for plotting temperature across year and highlight the time period of bleaching.. 
+
