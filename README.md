@@ -1,4 +1,5 @@
 # Remote Sensing, GIS and Coral bleaching
+<<<<<<< HEAD
 
 ## BS711 Remote sensing data manipulation exercise: Exploring remotely sensed coral reef data 
 
@@ -169,3 +170,5 @@ Maina, J., Venus, V., McClanahan, T. R., & Ateweberhan, M. (2008). Modelling sus
  Maynard, J., van Hooidonk, R., Eakin, C. M., Puotinen, M., Garren, M., Williams, G., … Harvell, C. D. (2015). Projections of climate conditions that increase coral disease susceptibility and pathogen abundance and virulence. Nature Climate Change, 5(7), 688–694. doi:10.1038/nclimate2625  
 
 Pandolfi, J. M. (2003). Global Trajectories of the Long-Term Decline of Coral Reef Ecosystems. Science, 301(5635), 955–958. doi:10.1126/science.1085706 
+=======
+>>>>>>> 78bc8dfc46e72113079d47375b9ad129af18a8f8
