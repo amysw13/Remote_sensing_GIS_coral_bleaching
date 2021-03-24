@@ -1,5 +1,4 @@
 # Remote Sensing, GIS and Coral bleaching
-<<<<<<< HEAD
 
 ## BS711 Remote sensing data manipulation exercise: Exploring remotely sensed coral reef data 
 
@@ -17,21 +16,34 @@ This exercise will introduce you to remote sensing data and how this can be extr
 
 This exercise can be done in the software of your choice (“software agnostic”), however, R scripts are provided on Moodle to facilitate your progression. Part A can be performed in any GIS software (ArcGis, GRASS, QGIS). Part B can be preformed in any spreadsheet (Excel, Open/Libre Office) or statistical package (SPSS).  
 
-Data analysis. Giovanni User Guide (available at: https://giovanni.gsfc.nasa.gov/giovanni/doc/UsersManualworkingdocument.docx.html) 
+- Data analysis. Giovanni User Guide available at:
+    - https://giovanni.gsfc.nasa.gov/giovanni/doc/UsersManualworkingdocument.docx.html 
 
-Useful Specific References in Talis on Moodle 
+- Useful Specific References in Talis on Moodle 
 
 ### Assessment 
 
-Data Analysis and Interpretation report: Students will produce a 2000-word document (40%) that examines geographic and temporal variability of environmental variables in the context of mass coral bleaching events. You can work in groups, but you must each individually submit an independent and original piece of written coursework. This document will require students to (i) produce figures with fully supporting legends to enable the figures to be “stand alone”, and (ii) analyse and interpret the main trends generated within these figures in the form of “Results & Discussion” style text (note this is NOT a full SPF; marking it weighted more towards results and discussion that standard SPFs). The document you submit must be presented in a neat and logical manner addressing each of the components of the exercises below. It is a legal requirement that you state on your assessed document the “Acknowledgement Policy” for the website(s) and their data. Upload to Faser by Friday (week 32) 7th May 4pm 2021. 
+Data Analysis and Interpretation report:
 
-Student will then create and present a 15-min (plus questions) oral description of the research undertaken (60%) - Week 33 – May 17th at 11am. 
+*1. Students will produce a 2000-word document (40%) that examines geographic and temporal variability of environmental variables in the context of mass coral bleaching events.*
 
-## PART A: Exploring temperature remote sensing data – comparing long to short term variation 
+  - You can work in groups, but you must each individually submit an independent and original piece of written coursework. 
+
+  - This document will require students to:
+      1. produce figures with fully supporting legends to enable the figures to be “stand alone”, and 
+      2. analyse and interpret the main trends generated within these figures in the form of “Results & Discussion” style text (note this is NOT a full SPF; marking it weighted more towards results and discussion that standard SPFs). 
+
+  - The document you submit must be presented in a neat and logical manner addressing each of the components of the exercises below. It is a legal requirement that you state on your assessed document the “Acknowledgement Policy” for the website(s) and their data. 
+
+*Upload to Faser by Friday (week 32) 7th May 4pm 2021.*
+
+*2. Student will then create and present a 15-min (plus questions) oral description of the research undertaken (60%) - Week 33 – May 17th at 11am.*
+
+## Part A: Exploring temperature remote sensing data – comparing long to short term variation 
 
 Spatial trends in sea surface temperature anomalies as it relates to a mass bleaching events. Maps can be powerful visual tools for the interpretation of spatial data. Mapping environmental conditions that can lead to bleaching can allow targeted monitoring and management responses (Liu et al., 2014). Mapping predicted environmental conditions can lead to the identifications of locations that can act as refugia for corals (Hooidonk, Maynard, & Planes, 2013) or that are made particularly vulnerable to bleaching and disease by future conditions (Maynard et al., 2015). 
 
- Objectives:  
+ *Objectives: *
 
 • Identify a mass-bleaching event (location and a year) from the literature.  
 
@@ -41,11 +53,22 @@ Spatial trends in sea surface temperature anomalies as it relates to a mass blea
 
  • Identify potential local coral refugia. 
 
-SETUP of part A Data and scripts for Remote sensing and GIS practical 
+## SETUP 
 
-To download: https://github.com/low-decarie/Remote-sensing-and-GIS-practical/archive/master.zip (or Click on green “Download or clone” and Click on “download zip”). Right click on downloaded file and extract/uncompress file (though you can navigate in the compress file on Windows, the files will not function correctly). 
+*Part A Data and scripts for Remote sensing and GIS practical *
 
-The folder contains all the scripts and example data files. Do not use these example data files to complete your assignment.  Steps for data retrieval from Giovani website for a sea surface temperature average data map: 
+- Download GitHub project:
+    - https://github.com/amysw13/Remote_sensing_GIS_coral_bleaching.git 
+    - Click on green "code" button 
+    - Choose to Download or clone project 
+      - **Right click on downloaded file and extract/uncompress file (though you can navigate in the compress file on Windows, the files will not function correctly).** 
+
+*Important presentation:* ["Mapping_temperature_anomalies"](file:///D:/Essex%20Uni/PhD/GLA%20Work/BS707/Remote_sensing_GIS_coral_bleaching/Mapping_temperature_anomalies_xar.html#1)
+
+
+The folder contains all the scripts and example data files. Do not use these example data files to complete your assignment. 
+
+- Steps for data retrieval from GIOVANNI website for a sea surface temperature average data map: 
 
 Log in. Type “sea surface temperature” in the search bar.  
 
@@ -71,7 +94,7 @@ Load both maps into your software of choice (a partial R script is provided on g
 
 Calculate the difference between the 10-year temperature average and the mean temperature for the year of the mass-bleaching event. 
 
-Explore your data. Now go to Presentation A in R to find out how to map mean temperature deviation from long-term climactic averages.  
+Explore your data. Now go to "Mapping_temperature_anomalies.R" within Rproj (downloaded from GitHub repository) to find out how to map mean temperature deviation from long-term climactic averages.  
 
 What is the range of temperature anomalies? Note the data contains freshwater systems that can have a far larger temperature anomaly than marine system. If needed, select the relevant data. 
 
@@ -89,7 +112,7 @@ Part A in Qgis is also available: Instruction
 
 Part A write up - Produce and present a map of temperature deviations from the long-term average with appropriate caption, which includes the key findings and interpretation of the figure. Discuss why the location of the mass-bleaching event can or cannot be identified on a map of temperature deviations from the long-term average. This discussion should include reference to the biological process of thermally induced coral bleaching, the calculation process (temporal resolution, comparison to integrated anomaly calculations, averaging across years by month) and limitation of remote sensing. Discuss the presence of potential local temperature refugia. This discussion should integrate oceanography concepts, including local predominant currents. This section should be around 600 words. 
 
-PART B: Spatial and temporal trends in sea surface temperature anomalies as it relates to a mass bleaching event. 
+## Part B: Spatial and temporal trends in sea surface temperature anomalies as it relates to a mass bleaching event. 
 
 Coral-bleaching susceptibility linked to the variability of the system (Donner 2011, Oliver & Palumbi 2011) and degree of exposure to environmental anomalies (Maina et al. 2008, 2011, Donner 2011).  
 
