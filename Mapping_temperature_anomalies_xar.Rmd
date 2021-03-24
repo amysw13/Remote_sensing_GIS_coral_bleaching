@@ -186,7 +186,7 @@ Rename files to appropriately.
 
 Accessing data from GIOVANNI
 <div class="centered">
-```{r, out.width="80%", out.height="45%", echo=FALSE}
+```{r, out.width="80%", out.height="45%", echo=FALSE, }
 
 knitr::include_graphics("./Figures/giovanni_data_page.png")
 
@@ -207,7 +207,7 @@ knitr::include_graphics("./Figures/giovanni_download.png")
 
 class: inverse, middle, center
 
-# Calculating temeperature anomalies 
+# Calculating temperature anomalies 
 
 ---
 
@@ -280,7 +280,7 @@ anomaly <- na.omit(anomaly)
 
 ## Constrain the data to sensible values
 
-- Select data that falls within + and - values of temperature difference
+- Select data that falls within **+** and **-** values of temperature difference
 
   - *Tip: Check your data to determine sensible data ranges to keep*
   
@@ -298,7 +298,7 @@ class: inverse, middle, center
 
 ---
 
-## Set the theme for the plots
+## Set the theme for plotting/mapping
 
 .pull-left[
 Example plot
@@ -314,7 +314,7 @@ p_original
 .pull-right[
 Change theme
 
-```{r fig.width=5, fig.height=3}
+```{r fig.width=5, fig.height=3, fig.align='center'}
 p_bw_theme <- p_original + theme_bw()
   
 p_bw_theme
@@ -325,7 +325,7 @@ p_bw_theme
 
 ## Creating custom theme functions
 
-Using function() can create custom themes to be applied to all plots or maps
+Using **function()** can create custom themes to be applied to all plots or maps
 
 
 ```{r}
@@ -345,12 +345,12 @@ theme_map <- function () {
 
 ## Set theme for all other plots
 
-```{r}
-#theme_set(theme_map())
+```{r eval=FALSE}
+theme_set(theme_map())
 ```
 OR
-```{r}
-#theme_set(theme_bw())
+```{r eval=FALSE}
+theme_set(theme_bw())
 ```
 
 
@@ -369,7 +369,9 @@ class: inverse, middle, center
 
 ## Downloading world base map
 
-Using the *"rnaturalearth"* package we will download a world map
+Using the **"rnaturalearth"** package we will download a world map
+
+- Downloading data from naturalearth, will show a message of details of file you have downloaded  
 
 - See *?ne_download* for more information on types of data you can download and more
 
@@ -381,7 +383,7 @@ world <- ne_download( scale = 110, type = 'countries', returnclass = "sf")
 
 ## Check the world map
 
-```{r , fig.height=5, fig.width=10}
+```{r , fig.height=5, fig.width=10, fig.align='center'}
 
 ggplot()+
   geom_sf(data = world)
@@ -420,7 +422,7 @@ p_map <- ggplot()+
 
 Maps can take some time to print so have some patience here... 
 
-```{r Unedited map, fig.height=5, fig.width=10}
+```{r Unedited map, fig.height=5, fig.width=10, fig.align='center'}
 print(p_map)
 ```
 
@@ -471,7 +473,7 @@ p_edited <- p_map +
 
 ## Edited map 
 
-```{r  fig.width=8, fig.height=4.5}
+```{r  fig.width=8, fig.height=4.5, fig.align='center'}
 
 print(p_edited)
 
@@ -492,7 +494,7 @@ See links for more mapping info and guides
 
   *Tip: Use ```?ggsave``` to see other formats which maps and plots can be saved*
 
-```{r}
+```{r eval=FALSE}
 
 ggsave("./Maps/Example_anomaly_map.png", p_edited, 
        bg = "transparent", width = 17, height = 12, 
@@ -503,7 +505,7 @@ ggsave("./Maps/Example_anomaly_map.png", p_edited,
 
  - remember to name the file appropriately for future reference
 
-```{r}
+```{r eval=FALSE}
 write.csv(anomaly, file = "./Output/long_term_anomaly.csv")
 ```
 

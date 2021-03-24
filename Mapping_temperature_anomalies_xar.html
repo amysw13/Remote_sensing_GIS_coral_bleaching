@@ -182,7 +182,7 @@ Downloading requested data from GIVOANNI
 
 class: inverse, middle, center
 
-# Calculating temeperature anomalies 
+# Calculating temperature anomalies 
 
 ---
 
@@ -259,7 +259,7 @@ anomaly &lt;- na.omit(anomaly)
 
 ## Constrain the data to sensible values
 
-- Select data that falls within + and - values of temperature difference
+- Select data that falls within **+** and **-** values of temperature difference
 
   - *Tip: Check your data to determine sensible data ranges to keep*
   
@@ -278,7 +278,7 @@ class: inverse, middle, center
 
 ---
 
-## Set the theme for the plots
+## Set the theme for plotting/mapping
 
 .pull-left[
 Example plot
@@ -304,14 +304,14 @@ p_bw_theme &lt;- p_original + theme_bw()
 p_bw_theme
 ```
 
-![](Mapping_temperature_anomalies_xar_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
+&lt;img src="Mapping_temperature_anomalies_xar_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
 
 ## Creating custom theme functions
 
-Using function() can create custom themes to be applied to all plots or maps
+Using **function()** can create custom themes to be applied to all plots or maps
 
 
 
@@ -333,12 +333,12 @@ theme_map &lt;- function () {
 
 
 ```r
-#theme_set(theme_map())
+theme_set(theme_map())
 ```
 OR
 
 ```r
-#theme_set(theme_bw())
+theme_set(theme_bw())
 ```
 
 
@@ -360,7 +360,9 @@ class: inverse, middle, center
 
 ## Downloading world base map
 
-Using the *"rnaturalearth"* package we will download a world map
+Using the **"rnaturalearth"** package we will download a world map
+
+- Downloading data from naturalearth, will show a message of details of file you have downloaded  
 
 - See *?ne_download* for more information on types of data you can download and more
 
@@ -371,7 +373,7 @@ world &lt;- ne_download( scale = 110, type = 'countries', returnclass = "sf")
 
 ```
 ## OGR data source with driver: ESRI Shapefile 
-## Source: "C:\Users\amysw\AppData\Local\Temp\RtmpywX5FL", layer: "ne_110m_admin_0_countries"
+## Source: "C:\Users\amysw\AppData\Local\Temp\RtmpUD04Hw", layer: "ne_110m_admin_0_countries"
 ## with 177 features
 ## It has 94 fields
 ## Integer64 fields read as strings:  POP_EST NE_ID
@@ -387,7 +389,7 @@ ggplot()+
   geom_sf(data = world)
 ```
 
-![](Mapping_temperature_anomalies_xar_files/figure-html/unnamed-chunk-22-1.png)&lt;!-- --&gt;
+&lt;img src="Mapping_temperature_anomalies_xar_files/figure-html/unnamed-chunk-22-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -426,7 +428,7 @@ Maps can take some time to print so have some patience here...
 print(p_map)
 ```
 
-![](Mapping_temperature_anomalies_xar_files/figure-html/Unedited map-1.png)&lt;!-- --&gt;
+&lt;img src="Mapping_temperature_anomalies_xar_files/figure-html/Unedited map-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -480,7 +482,7 @@ p_edited &lt;- p_map +
 print(p_edited)
 ```
 
-![](Mapping_temperature_anomalies_xar_files/figure-html/unnamed-chunk-26-1.png)&lt;!-- --&gt;
+&lt;img src="Mapping_temperature_anomalies_xar_files/figure-html/unnamed-chunk-26-1.png" style="display: block; margin: auto;" /&gt;
 
 See links for more mapping info and guides
 
