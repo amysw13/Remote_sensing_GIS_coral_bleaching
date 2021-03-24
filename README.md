@@ -1,1 +1,1 @@
-# Remote_sensing_GIS_coral_bleaching
+# Remote Sensing, GIS and Coral bleaching
