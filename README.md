@@ -55,9 +55,9 @@ Office) or statistical package (SPSS).
 
 Data Analysis and Interpretation report:
 
-*1. Students will produce a 2000-word document (40%) that examines
+**1. Students will produce a 2000-word document (40%) that examines
 geographic and temporal variability of environmental variables in the
-context of mass coral bleaching events.*
+context of mass coral bleaching events.**
 
 -   You can work in groups, but you must each individually submit an
     independent and original piece of written coursework.
@@ -76,11 +76,11 @@ context of mass coral bleaching events.*
     is a legal requirement that you state on your assessed document the
     “Acknowledgement Policy” for the website(s) and their data.
 
-*Upload to Faser by Friday (week 32) 7th May 4pm 2021.*
+**Upload to Faser by Friday (week 32) 7th May 4pm 2021.**
 
-*2. Student will then create and present a 15-min (plus questions) oral
+**2. Student will then create and present a 15-min (plus questions) oral
 description of the research undertaken (60%) - Week 33 – May 17th at
-11am.*
+11am.**
 
 ## Part A: Exploring temperature remote sensing data – comparing long to short term variation
 
@@ -94,7 +94,7 @@ corals (Hooidonk, Maynard, & Planes, 2013) or that are made particularly
 vulnerable to bleaching and disease by future conditions (Maynard et
 al., 2015).
 
-*Objectives:*
+**Objectives:**
 
 • Identify a mass-bleaching event (location and a year) from the
 literature.
@@ -375,42 +375,48 @@ strengths and weaknesses (\~600 words).
 This practical is based on a practical initially developed by David
 Suggett and Etienne Low-Décarie.
 
-## References
+## Further reading
 
-Baker, A. C., Glynn, P. W., & Riegl, B. (2008). Climate change and coral
-reef bleaching: An ecological assessment of long-term impacts, recovery
-trends and future outlook. Estuarine, Coastal and Shelf Science, 80(4),
-435–471. <doi:10.1016/j.ecss.2008.09.003>
+Foo, S. A., & Asner, G. P. (2019). Scaling up coral reef restoration
+using remote sensing technology. Frontiers in Marine Science, 6(MAR),
+1–8. <https://doi.org/10.3389/fmars.2019.00079>
 
-Donner, S. D. (2011). An evaluation of the effect of recent temperature
-variability on the prediction of coral bleaching events. Ecological
-Applications, 21(5), 1718– 1730. <doi:10.1890/10-0107.1>
+Hedley, J. D., Roelfsema, C. M., Chollett, I., Harborne, A. R., Heron,
+S. F., Weeks, S. J., … Mumby, P. J. (2016). Remote sensing of coral
+reefs for monitoring and management: A review. Remote Sensing, 8(2).
+<https://doi.org/10.3390/rs8020118>
 
-Hooidonk, R. Van, Maynard, J. A., & Planes, S. (2013). Temporary refugia
+Hickey, S. M., Radford, B., Roelfsema, C. M., Joyce, K. E., Wilson, S.
+K., Marrable, D., … Murray, K. (2020). Between a Reef and a Hard Place:
+Capacity to Map the Next Coral Reef Catastrophe. Frontiers in Marine
+Science, 7(September), 1–9. <https://doi.org/10.3389/fmars.2020.544290>
+
+Mason, R. A. B., Skirving, W. J., & Dove, S. G. (2020). Integrating
+physiology with remote sensing to advance the prediction of coral
+bleaching events. Remote Sensing of Environment, 246(February), 111794.
+<https://doi.org/10.1016/j.rse.2020.111794>
+
+Parsons, M., Bratanov, D., Gaston, K. J., & Gonzalez, F. (2018). UAVs,
+hyperspectral remote sensing, and machine learning revolutionizing reef
+monitoring. Sensors (Switzerland), 18(7), 1–20.
+<https://doi.org/10.3390/s18072026>
+
+Putra, R. D., Suhana, M. P., Kurniawn, D., Abrar, M., Siringoringo, R.
+M., Sari, N. W. P., … Suryanti, A. (2019). Detection of reef scale
+thermal stress with Aqua and Terra MODIS satellite for coral bleaching
+phenomena. AIP Conference Proceedings, 2094(April).
+<https://doi.org/10.1063/1.5097493>
+
+Safaie, A., Silbiger, N. J., McClanahan, T. R., Pawlak, G., Barshis, D.
+J., Hench, J. L., … Davis, K. A. (2018). High frequency temperature
+variability reduces the risk of coral bleaching. Nature Communications,
+9(1), 1–12. <https://doi.org/10.1038/s41467-018-04074-2>
+
+Van Hooidonk, R., Maynard, J. A., & Planes, S. (2013). Temporary refugia
 for coral reefs in a warming world. Nature Climate Change, 3(5),
-508–511. <doi:10.1038/nclimate1829>
+508–511. <https://doi.org/10.1038/nclimate1829>
 
-Liu, G., Heron, S., Eakin, C., Muller-Karger, F., Vega-Rodriguez, M.,
-Guild, L., … Lynds, S. (2014). Reef-Scale Thermal Stress Monitoring of
-Coral Ecosystems: New 5-km Global Products from NOAA Coral Reef Watch.
-Remote Sensing, 6(11), 11579–11606. <doi:10.3390/rs61111579>
-
-Maina, J., McClanahan, T. R., Venus, V., Ateweberhan, M., & Madin, J.
-(2011). Global Gradients of Coral Exposure to Environmental Stresses and
-Implications for Local Management. PLoS ONE, 6(8), e23064.
-<doi:10.1371/journal.pone.0023064>
-
-Maina, J., Venus, V., McClanahan, T. R., & Ateweberhan, M. (2008).
-Modelling susceptibility of coral reefs to environmental stress using
-remote sensing data and GIS models. Ecological Modelling, 212(3-4),
-180–199. <doi:10.1016/j.ecolmodel.2007.10.033>
-
-Maynard, J., van Hooidonk, R., Eakin, C. M., Puotinen, M., Garren, M.,
-Williams, G., … Harvell, C. D. (2015). Projections of climate conditions
-that increase coral disease susceptibility and pathogen abundance and
-virulence. Nature Climate Change, 5(7), 688–694.
-<doi:10.1038/nclimate2625>
-
-Pandolfi, J. M. (2003). Global Trajectories of the Long-Term Decline of
-Coral Reef Ecosystems. Science, 301(5635), 955–958.
-<doi:10.1126/science.1085706>
+Van Hooidonk, Ruben, Maynard, J. A., Manzello, D., & Planes, S. (2014).
+Opposite latitudinal gradients in projected ocean acidification and
+bleaching impacts on coral reefs. Global Change Biology, 20(1), 103–112.
+<https://doi.org/10.1111/gcb.12394>
