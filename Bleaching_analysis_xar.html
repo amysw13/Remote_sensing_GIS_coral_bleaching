@@ -133,7 +133,7 @@ class: inverse, middle, center
 
 ---
 
-## Inspect the data with a plot
+## Inspect the raw data with a plot
 
 
 
@@ -221,7 +221,9 @@ annual_integrated_anomaly &lt;- group_by(monthly_anomaly,
 
 ---
 
-## Inspect the data with a plot
+## Inspect the yearly temperature anomaly data with a plot
+
+- Here we are comparing the 3 sites of bleached and non bleached reefs 
 
 
 ```r
@@ -232,6 +234,7 @@ p &lt;- qplot(data=annual_integrated_anomaly,
            ylab="y axis label",
            colour=Bleached,
            geom="boxplot")
+
 print(p)
 ```
 
@@ -239,9 +242,9 @@ print(p)
 
 ---
 
-## Save plot
+## Save plot and data 
 
-- Choose your preferred method for saving
+- Choose your preferred format for saving
 
 
 ```r
@@ -249,10 +252,6 @@ ggsave("./Plots/Example_bleach_boxplot.png", p,
        bg = "transparent", width = 17, height = 12, 
        units =  "cm", dpi = 300)
 ```
-
----
-
-## Save file
 
 
 
@@ -264,14 +263,43 @@ write.csv(annual_integrated_anomaly,
 
 ---
 
+## Further analyses
+
+Plotting and statistical analysis to determine if bleaching years are different from years in which no bleaching is reported and if site where bleaching is reported are different from sites were bleaching is not reported.
+
+- How do bleaching vs. non-bleaching years differ?
+
+- How are you able to compare bleached vs. non-bleached reefs?
+
+- Plot temperature anomalies for each site showing bleaching vs. non-bleached reefs.
+  - Highlight time period of bleaching
+    - *Hint: geom_rect in ggplot*
+    - *https://stackoverflow.com/questions/29648907/using-geom-rect-for-time-series-shading-in-r*
+
+- Create insightful site maps of bleached vs. non-bleached reefs
+
+---
+
 ## Next steps
 
-- Here need to check the code and report for the statistical analysis required here to check between sites  and  reefs bleached vs. non.bleached 
+- Using other remotely sensed data, can we infer bleaching on coral reefs?
 
-Plotting and statistical analysis to determine if bleaching years are different from years in which no bleaching is reported and if site where bleaching is reported are different from sites were bleaching is not reported
+- How else can we use remotely sensed data in this type of analyses?
+
+  - Plot, map and analyse data to demonstrate this
+  
+---
+
+.pull-left[
+&lt;img src="./Figures/istockphoto-886544818-612x612.jpg" width="816" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="./Figures/coral_reef.jpg" width="5333" style="display: block; margin: auto;" /&gt;
+
+]
 
 
-- Find code for plotting temperature across year and highlight the time period of bleaching.. 
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
