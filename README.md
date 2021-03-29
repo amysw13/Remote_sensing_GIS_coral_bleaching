@@ -34,18 +34,19 @@ Specifically, you will develop skills and be assessed on your ability to
 present remotely-sensed spatial data in a map. You will also develop
 skills and be assessed on your ability to manipulate and summarize large
 temporal datasets. Lastly, you will develop and be assessed on your time
-management skills, as the assignment is due at the end of class. Whilst
-the integration of statistical tests is not a requirement, statistics
-will substantially support any claims of the existence or absence of a
-trend or difference.
+management skills, whilst working with large data sets. Whilst the
+integration of statistical tests is not a requirement, statistics will
+substantially support any claims of the existence or absence of a trend
+or difference.
 
 ### Tool (software)
 
 This exercise can be done in the software of your choice (“software
-agnostic”), however, R scripts are provided on Moodle to facilitate your
-progression. Part A can be performed in any GIS software (ArcGis, GRASS,
-QGIS). Part B can be preformed in any spreadsheet (Excel, Open/Libre
-Office) or statistical package (SPSS).
+agnostic”), however, R scripts are provided on within the GitHub
+repository in the “R” folder to facilitate your progression. Part A can
+be performed in any GIS software (ArcGis, GRASS, QGIS). Part B can be
+preformed in any spreadsheet (Excel, Open/Libre Office) or statistical
+package (SPSS).
 
 -   Data analysis. Giovanni User Guide available at:
     -   <https://giovanni.gsfc.nasa.gov/giovanni/doc/UsersManualworkingdocument.docx.html>
@@ -64,25 +65,49 @@ context of mass coral bleaching events.**
 
 -   This document will require students to:
 
-    1.  produce figures with fully supporting legends to enable the
+    1.  Produce figures with fully supporting legends to enable the
         figures to be “stand alone”, and
     2.  analyse and interpret the main trends generated within these
         figures in the form of “Results & Discussion” style text (note
         this is NOT a full SPF; marking it weighted more towards results
-        and discussion that standard SPFs).
+        and discussion than standard SPFs).
 
 -   The document you submit must be presented in a neat and logical
-    manner addressing each of the components of the exercises below. It
-    is a legal requirement that you state on your assessed document the
-    “Acknowledgement Policy” for the website(s) and their data.
+    manner addressing each of the components of the exercises below.
 
-**Upload to Faser by Friday (week 32) 7th May 4pm 2021.**
+-   It is a legal requirement that you state on your assessed document
+    the “Acknowledgement Policy” for the website(s) and their data.
+
+**Upload to FASER by Friday (week 32) 7th May 4pm 2021.**
 
 **2. Student will then create and present a 15-min (plus questions) oral
 description of the research undertaken (60%) - Week 33 – May 17th at
 11am.**
 
-## Part A: Exploring temperature remote sensing data – comparing long to short term variation
+## Setup
+
+**Data and scripts for practical**
+
+-   Download GitHub project:
+    -   <https://github.com/amysw13/Remote_sensing_GIS_coral_bleaching.git>
+    -   Click on green “code” button
+    -   Choose to Download or clone project
+        -   **Right click on downloaded file and extract/uncompress file
+            (though you can navigate in the compress file on Windows,
+            the files will not function correctly).**
+        -   The folder contains all the scripts and example data files.
+            **Do not use these example data files to complete your
+            assignment.**
+
+**Important presentations:**
+
+1.  Presentation A:
+    [Mapping\_temperature\_anomalies](https://amysw13.github.io/Remote_sensing_GIS_coral_bleaching/Mapping_temperature_anomalies_xar.html#1)
+
+2.  Presentation B:
+    [Bleaching\_analysis](https://amysw13.github.io/Remote_sensing_GIS_coral_bleaching/Bleaching_analysis_xar.html#1)
+
+## Part A: Exploring sea surface temperature remote sensing data – comparing long to short term variation
 
 Spatial trends in sea surface temperature anomalies as it relates to a
 mass bleaching events. Maps can be powerful visual tools for the
@@ -101,35 +126,11 @@ literature.
 
 • For the year of the mass-bleaching event, create a world map of the
 mean temperature deviation from long-term climactic averages
-(Presentation A, below).
-
+(Presentation A, below).  
 • Observe if temperature was particularly high or low in locations that
 experienced mass bleaching.
 
 • Identify potential local coral refugia.
-
-## Setup
-
-**Data and scripts for practical**
-
--   Download GitHub project:
-    -   <https://github.com/amysw13/Remote_sensing_GIS_coral_bleaching.git>
-    -   Click on green “code” button
-    -   Choose to Download or clone project
-        -   **Right click on downloaded file and extract/uncompress file
-            (though you can navigate in the compress file on Windows,
-            the files will not function correctly).**
-        -   The folder contains all the scripts and example data files.
-            Do not use these example data files to complete your
-            assignment.
-
-**Important presentations:**
-
-1.  Presentation A
-    [“Mapping\_temperature\_anomalies”](https://amysw13.github.io/Remote_sensing_GIS_coral_bleaching/Mapping_temperature_anomalies_xar.html#1)
-
-2.  Presentation B
-    ["Bleaching\_analysis](https://amysw13.github.io/Remote_sensing_GIS_coral_bleaching/Bleaching_analysis_xar.html#1)
 
 ### Downloading data from GIOVANNI
 
@@ -180,33 +181,35 @@ Year averaged sea surface temperature
 **Note: You will need to justify your selection of date range (calendar
 year, year centred on bleaching event, month, etc.).**
 
-### Data analyses
+### Data analyses recommendations
 
 **Part A**
 
-Load both maps into your software of choice (a partial R script is
-provided on github, but you are free to use the GIS software of your
-choice).
+-   Load both datasets into your software of choice (a partial R script
+    is provided on github, but you are free to use the GIS software of
+    your choice).
 
-Calculate the difference between the 10-year temperature average and the
-mean temperature for the year of the mass-bleaching event.
+-   Calculate the difference between the 10-year temperature average (or
+    time-frame you have downloaded) and the mean temperature for the
+    year of the mass-bleaching event.
 
-Explore your data. Now go to “Mapping\_temperature\_anomalies.R” within
-Rproj (downloaded from GitHub repository) to find out how to map mean
-temperature deviation from long-term climactic averages.
+-   Explore your data:
 
-What is the range of temperature anomalies? Note the data contains
-freshwater systems that can have a far larger temperature anomaly than
-marine system. If needed, select the relevant data.
+    -   What is the range of temperature anomalies? Note the data
+        contains freshwater systems that can have a far larger
+        temperature anomaly than marine system. If needed, select the
+        relevant data.
 
-Plot (map) the resulting difference, highlighting the location of the
-mass bleaching event(s). With positive and negative cell values in a
-map, a two colour gradient can better highlight differences than a
-single colour gradient covering the whole range. This is often encoded
-as blue for negative and red for positive. Steps for data analysis are
-provided in the “Part\_A\_map\_difference.R” R script file.
+-   Plot (map) the resulting difference, highlighting the location of
+    the mass bleaching event(s). With positive and negative cell values
+    in a map, a two colour gradient can better highlight differences
+    than a single colour gradient covering the whole range. This is
+    often encoded as blue for negative and red for positive, but you may
+    want to consider colour palettes that accomodate for
+    colour-blindness. Steps for data analysis are provided in the
+    “Part\_A\_map\_difference.R” R script file.
 
-Additional challenges (not assessed):
+*Additional challenges (not assessed):*
 
 • Add to the map the distribution of coral reefs.
 
@@ -217,9 +220,18 @@ by <http://www.reefbase.org>.
 Bleaching Thermal Stress HotSpot, or anomalies for only the hottest
 month,…)
 
-Part A in Qgis is also available: Instruction
+**Extra resources:**
 
-Part A write up -
+These additional resources will guide you through using NetCDF files in
+QGIS and ArcGIS should you wish to use them over R.
+
+Part A in QGIS:
+[Instructions](http://www.ggiuliani.ch/download/netcdf_qgis_GG.pdf)
+
+Part A in ArcGIS:
+[Instructions](https://help.arcgis.com/en/arcgisdesktop/10.0/pdf/netcdf-tutorial.pdf)
+
+### Part A write up:
 
 Produce and present a map of temperature deviations from the long-term
 average with appropriate caption, which includes the key findings and
@@ -238,7 +250,7 @@ around 600 words.
 
 Coral-bleaching susceptibility linked to the variability of the system
 (Donner 2011, Oliver & Palumbi 2011) and degree of exposure to
-environmental anomalies (Maina et al. 2008, 2011, Donner 2011).
+environmental anomalies (Maina et al.,2008, 2011, Donner 2011).
 
 **Objectives:**
 
@@ -251,7 +263,7 @@ bleached) reference sites.
 
 • Observe temporal trends in these anomalies.
 
-Steps for data retrieval:
+### Steps for data retrieval:
 
 1.  Based on your observations in part A and in reference to the
     literature, select three locations that have experienced a mass
@@ -267,65 +279,41 @@ Steps for data retrieval:
     coral reef location and 1 reference unbleached coral reef location.
     E.g. Toliara (Site 1): reef bleached + reference unbleached reef.
 
-<!-- -->
-
-1.  In Select Plot, choose: Time Series: Area Averaged (Note: slightly
+4.  In Select Plot, choose: Time Series: Area Averaged (Note: slightly
     different from Part A)
 
-2.  Select a suitable sea surface temperature layer. Note: the smaller
+5.  Select a suitable sea surface temperature layer. Note: the smaller
     area can allow you or may require you to select a higher spatial
     resolution.
 
-3.  Select the beginning and end date so as to capture the longest time
+6.  Select the beginning and end date so as to capture the longest time
     series available.
 
-4.  Constrain the map to a 0.5 degree longitude and 0.5 degree latitude
+7.  Constrain the map to a 0.5 degree longitude and 0.5 degree latitude
     area centred on your first selected location (Caution: does a 1
     degree by 1 degree cell cover the same area everywhere on the
     planet?)
 
-5.  Click “Plot Data” g. Select the Download tab and download the CSV
+8.  Click “Plot Data” g. Select the Download tab and download the CSV
     file (you may need to right click and “Save file as…”).
 
-6.  Open the .csv file and add a column with the header “Site” and to
+9.  Open the .csv file and add a column with the header “Site” and to
     which you add the name of the 3 sites to all cells in the column.
     Add a second column with the header “Bleached” and to which you the
     values of TRUE or FALSE.
 
-7.  Repeat this process until you have the data you need for all 6
+10. Repeat this process until you have the data you need for all 6
     timeseries.
 
-HINT: You can open a window for each site to simultaneously download all
-the data.
+**HINT: You can open a window for each site to simultaneously download
+all the data.**
 
 HINT: Do a sanity check to make sure your data set does not include
 impossible values. For example, apply the function “summary” to your
-data. Calculation of annualized anomalies Commands for the calculation
-of annualized anomalies are provided in “Part\_B\_time\_anomaly.R”. A
-“monthly anomaly” can be calculated as the value for any particular
-month (for any particular year) minus the typical average for all years.
-Firstly calculate the average value for each month across all years,
-i.e. xi2004−2014 , where i is the month January, February etc. Once you
-have done this, you can calculate the anomaly for each month throughout
-your data set. Monthly anomaly= xi − xi2004−2014 \[2\]
+data. Calculation of annualized anomalies commands for the calculation
+of annualized anomalies are provided in “Bleaching\_analysis.R”.
 
-Hint: In excel, use the $ to fix a cell or a column in an equation. Note
-that this will give you a means to examine the variability within years
-(i.e. the typical seasonal variability). In order to further examine
-across years, you want to calculate the total anomalous conditions (both
-positive and negative) that have accumulated over each year: Annual
-integrated anomaly = (xi − xi2004−2014 ) i=January i=December ∑ \[3\]
-However, you will have “negative” anomalies, i.e. values that are “lower
-than usual”. This can be equally as harmful to corals as “higher than
-usual” temperatures (e.g. Weeks et al. 2008). Furthermore, using the
-above calculations, unusually cold months would cancel out the anomaly
-of unusually hot months of a year. Thus the absolute value of the
-monthly anomaly must be taken. Monthly absolute anomaly= (xi −
-xi2004−2014 ) 2 = xi − xi2004−2014 \[4\] Which can be used in the
-calculation of the annual integrated absolute anomaly: Annual integrated
-absolute anomaly = xi − xi2004−2014 i=January i=December ∑ \[5\]
-
-Additional challenges (not assessed):
+*Additional challenges (not assessed):*
 
 • Calculate alternative metric based on SST (eg. NOAA Coral Reef Watch
 Coral Bleaching Thermal Stress HotSpot, or anomalies for only the
@@ -334,18 +322,19 @@ hottest month,…)
 • Calculate alternative metric which integrates other variables (eg.
 Irradiance).
 
-Part B DAI write up: (\~600 words) Is the variance in temperature
-different between sites (this can be based on annual temperature range
-or other measures of temperature variability within site)? Current work
-suggests that variability promotes stress tolerance (e.g. Oliver &
-Palumbi 2011). At which site would corals be expected to be more
-tolerant to temperature extremes? This section of the DAI should be
-supported by three visual elements (tables and/or figures), each
-accompanied by a complete caption including key results and
-interpretation. One of the visual elements should introduce the selected
-sites. All statistical statements should include a measure of the
-difference or trend with relevant units in addition to standard
-reporting of statistical test.
+### Part B DAI write up:
+
+(\~600 words) Is the variance in temperature different between sites
+(this can be based on annual temperature range or other measures of
+temperature variability within site)? Current work suggests that
+variability promotes stress tolerance (e.g. Oliver & Palumbi 2011). At
+which site would corals be expected to be more tolerant to temperature
+extremes? This section of the DAI should be supported by three visual
+elements (tables and/or figures), each accompanied by a complete caption
+including key results and interpretation. One of the visual elements
+should introduce the selected sites. All statistical statements should
+include a measure of the difference or trend with relevant units in
+addition to standard reporting of statistical test.
 
 Discuss a management strategy that could harness this information.
 (\~600 words) Discuss why years of mass bleaching can or cannot be
@@ -361,19 +350,21 @@ global climatic events and global change.
 
 Handed in assessment – 2000-word max
 
-Your write up is essentially split into 3 sections: 1. a 10-year
-averaged to one year / month averaged temperature comparison (DAI) to
-set the scene (\~600 words), 2. A DAI section focused on temperature
-differences between bleached and unbleached sites (\~600 words). 3. a
-discussion of how management strategies may use such information and its
-strengths and weaknesses (\~600 words).
+Your write up is essentially split into 3 sections:
+
+1.  a 10-year averaged to one year / month averaged temperature
+    comparison (DAI) to set the scene (\~600 words),
+2.  A DAI section focused on temperature differences between bleached
+    and unbleached sites (\~600 words),
+3.  a discussion of how management strategies may use such information
+    and its strengths and weaknesses (\~600 words).
 
 **Upload to Faser by Friday (week 32) 7th May 4pm 2021.**
 
 ## Acknowledgements:
 
-This practical is based on a practical initially developed by David
-Suggett and Etienne Low-Décarie.
+This practical is based on a practical initially developed by Dr David
+Suggett and Dr Etienne Low-Décarie.
 
 ## Further reading
 
