@@ -121,13 +121,18 @@ ggsave("./Plots/Example_bleach_boxplot.png", p,
 ##Further analysis ############################################################
 
 
-##Possible statistical analyses
+##Possible statistical analyses - 
+#think about what you are testing for and what the response variables may be 
+
 fit <- lm(data = annual_integrated_anomaly,
           Bleached ~ aia_Temperature + Site + aia_Temperature:Site)
 #require(car)
 Anova(fit)
 par(mfrow = c(2,2))
 plot(fit)
+summary(fit)
+
+ + Year + aia_Temperature:Year
 
 #Plotting temperature over time for each site and using geom_rect to highlight year of bleaching
 #code will need to be change in order to do this individually 

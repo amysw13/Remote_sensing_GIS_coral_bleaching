@@ -506,7 +506,7 @@ ggsave("./Maps/Example_anomaly_map.png", p_edited,
  - remember to name the file appropriately for future reference
 
 ```{r eval=FALSE}
-write.csv(anomaly, file = "./Output/long_term_anomaly.csv")
+write.csv(temp_anomaly, file = "./Output/long_term_anomaly.csv")
 ```
 
 ---
