@@ -123,6 +123,7 @@ ggsave("./Plots/Example_bleach_boxplot.png", p,
 
 ##Possible statistical analyses - 
 #think about what you are testing for and what the response variables may be 
+#Note: the code below is just an example and not specific to the test you may want to carry out. 
 
 fit <- lm(data = annual_integrated_anomaly,
           Bleached ~ aia_Temperature + Site + aia_Temperature:Site)
@@ -132,7 +133,6 @@ par(mfrow = c(2,2))
 plot(fit)
 summary(fit)
 
- + Year + aia_Temperature:Year
 
 #Plotting temperature over time for each site and using geom_rect to highlight year of bleaching
 #code will need to be change in order to do this individually 

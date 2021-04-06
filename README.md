@@ -67,7 +67,7 @@ context of mass coral bleaching events.**
 
     1.  Produce figures with fully supporting legends to enable the
         figures to be “stand alone”, and
-    2.  analyse and interpret the main trends generated within these
+    2.  Analyse and interpret the main trends generated within these
         figures in the form of “Results & Discussion” style text (note
         this is NOT a full SPF; marking it weighted more towards results
         and discussion than standard SPFs).
@@ -77,6 +77,9 @@ context of mass coral bleaching events.**
 
 -   It is a legal requirement that you state on your assessed document
     the “Acknowledgement Policy” for the website(s) and their data.
+
+Note: There is more information on data analysis and interpretation
+write up under parts A and B.
 
 **Upload to FASER by Friday (week 32) 7th May 4pm 2021.**
 
@@ -126,7 +129,8 @@ literature.
 
 • For the year of the mass-bleaching event, create a world map of the
 mean temperature deviation from long-term climactic averages
-(Presentation A, below).  
+(Presentation A).
+
 • Observe if temperature was particularly high or low in locations that
 experienced mass bleaching.
 
@@ -205,9 +209,9 @@ year, year centred on bleaching event, month, etc.).**
     in a map, a two colour gradient can better highlight differences
     than a single colour gradient covering the whole range. This is
     often encoded as blue for negative and red for positive, but you may
-    want to consider colour palettes that accomodate for
+    want to consider colour palettes that accommodate for
     colour-blindness. Steps for data analysis are provided in the
-    “Part\_A\_map\_difference.R” R script file.
+    “Mapping\_temperature\_anomalies.R” R script file.
 
 *Additional challenges (not assessed):*
 
@@ -270,7 +274,7 @@ bleached) reference sites.
     bleaching event or a large temperature anomaly and to which you pair
     a nearby coral reef location for which mass bleaching is not
     reported or little to no temperature anomaly was observed (reference
-    site). Hint see NOAA Coral Reef Watch:
+    site). Hint: see NOAA Coral Reef Watch:
     <https://coralreefwatch.noaa.gov/index.php>
 
 2.  Note their longitude and latitude.
@@ -307,11 +311,6 @@ bleached) reference sites.
 
 **HINT: You can open a window for each site to simultaneously download
 all the data.**
-
-HINT: Do a sanity check to make sure your data set does not include
-impossible values. For example, apply the function “summary” to your
-data. Calculation of annualized anomalies commands for the calculation
-of annualized anomalies are provided in “Bleaching\_analysis.R”.
 
 *Additional challenges (not assessed):*
 

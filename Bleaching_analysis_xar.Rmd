@@ -1,8 +1,8 @@
 ---
 title: "Bleaching analysis"
-subtitle: "Timeseries analysis of temperature anomalies across sites"
+subtitle: "Time series analysis of temperature anomalies across sites"
 author: "Amy Sing Wong"
-institute: "BS711 Sateliite & GIS analysis"
+institute: "BS711 Satellite & GIS analysis"
 date: "23/03/2021"
 output:
   xaringan::moon_reader:
@@ -19,7 +19,7 @@ output:
 
 - RStudio housekeeping
 
-- Creating function for GIVOANNI timeseries data
+- Creating function for GIVOANNI time series data
   - loading
   - reading a list of files
   - combining all datasets into one dataframe
@@ -63,12 +63,13 @@ if(!require(lubridate)){install.packages("lubridate"); library(lubridate)}
 
 class: inverse, middle, center
 
-# The GIOVANNI timeseries data 
+# The GIOVANNI time series data 
 
 ---
 
 ## Function for loading GIOVANNI time series data
 
+Creating custom function to load in GIOVANNI data (Time series: Area Averaged)
 
 ```{r}
 load_giovanni_time <- function(path){
@@ -90,7 +91,7 @@ load_giovanni_time <- function(path){
 
 ---
 
-## Create a list of timeseries files
+## Create a list of time series files
 
 - This is preparation for reading in multiple files
 
@@ -128,7 +129,7 @@ class: inverse, middle, center
 ## Inspect the raw data with a plot
 
 
-```{r fig.height = 4 , fig.width = 8}
+```{r fig.height = 4 , fig.width = 8, fig.align='center'}
 p <- qplot(data=all_data,
            x=Date,
            y=Temperature,
@@ -142,6 +143,10 @@ print(p)
 
 ## Sanity check and error removal
 
+Make sure your data set does not include impossible values
+
+- Apply **summary()** function to check your dataframe
+
 ```{r}
 summary(all_data)
 ```
@@ -154,7 +159,7 @@ class: inverse, middle, center
 
 ---
 
-## Extract month and year
+## Extract month and year data
 
 ```{r}
 all_data$Year <- year(all_data$Date)
@@ -164,7 +169,7 @@ all_data$month <- month(all_data$Date)
 
 ---
 
-## Calculate monthly anomaly
+## Calculate monthly temperature anomalies
 
 ```{r}
 monthly_anomaly <- group_by(all_data,
@@ -177,7 +182,7 @@ monthly_anomaly <- group_by(all_data,
 
 ---
 
-## Calculate yearly anomaly
+## Calculate yearly temperature anomalies
 
 ```{r message=FALSE}
 annual_integrated_anomaly <- group_by(monthly_anomaly,
@@ -193,7 +198,7 @@ annual_integrated_anomaly <- group_by(monthly_anomaly,
 
 - Here we are comparing the 3 sites of bleached and non bleached reefs 
 
-```{r fig.height = 3.5 , fig.width = 8}
+```{r fig.height = 3.5 , fig.width = 8, fig.align='center'}
 
 p <- qplot(data=annual_integrated_anomaly,
            x=Site,

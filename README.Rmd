@@ -44,10 +44,12 @@ Data Analysis and Interpretation report:
 
   - This document will require students to:
       1. Produce figures with fully supporting legends to enable the figures to be “stand alone”, and 
-      2. analyse and interpret the main trends generated within these figures in the form of “Results & Discussion” style text (note this is NOT a full SPF; marking it weighted more towards results and discussion than standard SPFs). 
+      2. Analyse and interpret the main trends generated within these figures in the form of “Results & Discussion” style text (note this is NOT a full SPF; marking it weighted more towards results and discussion than standard SPFs). 
 
   - The document you submit must be presented in a neat and logical manner addressing each of the components of the exercises below. 
   - It is a legal requirement that you state on your assessed document the “Acknowledgement Policy” for the website(s) and their data. 
+  
+  Note: There is more information on data analysis and interpretation write up under parts A and B.
 
 **Upload to FASER by Friday (week 32) 7th May 4pm 2021.**
 
@@ -81,7 +83,8 @@ Spatial trends in sea surface temperature anomalies as it relates to a mass blea
 
 • Identify a mass-bleaching event (location and a year) from the literature.  
 
-• For the year of the mass-bleaching event, create a world map of the mean temperature deviation from long-term climactic averages (Presentation A, below).  
+• For the year of the mass-bleaching event, create a world map of the mean temperature deviation from long-term climactic averages (Presentation A).
+
 • Observe if temperature was particularly high or low in locations that experienced mass bleaching. 
 
 • Identify potential local coral refugia. 
@@ -135,7 +138,7 @@ Year averaged sea surface temperature
 - Explore your data: 
   - What is the range of temperature anomalies? Note the data contains freshwater systems that can have a far larger temperature anomaly than marine system. If needed, select the relevant data. 
 
-- Plot (map) the resulting difference, highlighting the location of the mass bleaching event(s). With positive and negative cell values in a map, a two colour gradient can better highlight differences than a single colour gradient covering the whole range. This is often encoded as blue for negative and red for positive, but you may want to consider colour palettes that accomodate for colour-blindness. Steps for data analysis are provided in the “Part_A_map_difference.R” R script file.  
+- Plot (map) the resulting difference, highlighting the location of the mass bleaching event(s). With positive and negative cell values in a map, a two colour gradient can better highlight differences than a single colour gradient covering the whole range. This is often encoded as blue for negative and red for positive, but you may want to consider colour palettes that accommodate for colour-blindness. Steps for data analysis are provided in the “Mapping_temperature_anomalies.R” R script file.  
 
 *Additional challenges (not assessed):*
 
@@ -178,7 +181,7 @@ Coral-bleaching susceptibility linked to the variability of the system (Donner 2
 
 ### Steps for data retrieval:  
 
-1. Based on your observations in part A and in reference to the literature, select three locations that have experienced a mass bleaching event or a large temperature anomaly and to which you pair a nearby coral reef location for which mass bleaching is not reported or little to no temperature anomaly was observed (reference site). Hint see NOAA Coral Reef Watch: https://coralreefwatch.noaa.gov/index.php 
+1. Based on your observations in part A and in reference to the literature, select three locations that have experienced a mass bleaching event or a large temperature anomaly and to which you pair a nearby coral reef location for which mass bleaching is not reported or little to no temperature anomaly was observed (reference site). Hint: see NOAA Coral Reef Watch: https://coralreefwatch.noaa.gov/index.php 
 
 2. Note their longitude and latitude.  
 
@@ -200,8 +203,6 @@ Coral-bleaching susceptibility linked to the variability of the system (Donner 2
 
   **HINT: You can open a window for each site to simultaneously download all the data.**
 
-
-HINT: Do a sanity check to make sure your data set does not include impossible values. For example, apply the function “summary” to your data. Calculation of annualized anomalies commands for the calculation of annualized anomalies are provided in “Bleaching_analysis.R”.
 
 *Additional challenges (not assessed):*
 

@@ -12,9 +12,9 @@
 class: center, middle, inverse, title-slide
 
 # Bleaching analysis
-## Timeseries analysis of temperature anomalies across sites
+## Time series analysis of temperature anomalies across sites
 ### Amy Sing Wong
-### BS711 Sateliite &amp; GIS analysis
+### BS711 Satellite &amp; GIS analysis
 ### 23/03/2021
 
 ---
@@ -24,7 +24,7 @@ class: center, middle, inverse, title-slide
 
 - RStudio housekeeping
 
-- Creating function for GIVOANNI timeseries data
+- Creating function for GIVOANNI time series data
   - loading
   - reading a list of files
   - combining all datasets into one dataframe
@@ -68,12 +68,13 @@ if(!require(lubridate)){install.packages("lubridate"); library(lubridate)}
 
 class: inverse, middle, center
 
-# The GIOVANNI timeseries data 
+# The GIOVANNI time series data 
 
 ---
 
 ## Function for loading GIOVANNI time series data
 
+Creating custom function to load in GIOVANNI data (Time series: Area Averaged)
 
 
 ```r
@@ -96,7 +97,7 @@ load_giovanni_time &lt;- function(path){
 
 ---
 
-## Create a list of timeseries files
+## Create a list of time series files
 
 - This is preparation for reading in multiple files
 
@@ -147,11 +148,15 @@ p &lt;- qplot(data=all_data,
 print(p)
 ```
 
-![](Bleaching_analysis_xar_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+&lt;img src="Bleaching_analysis_xar_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
 ## Sanity check and error removal
+
+Make sure your data set does not include impossible values
+
+- Apply **summary()** function to check your dataframe
 
 
 ```r
@@ -183,7 +188,7 @@ class: inverse, middle, center
 
 ---
 
-## Extract month and year
+## Extract month and year data
 
 
 ```r
@@ -194,7 +199,7 @@ all_data$month &lt;- month(all_data$Date)
 
 ---
 
-## Calculate monthly anomaly
+## Calculate monthly temperature anomalies
 
 
 ```r
@@ -208,7 +213,7 @@ monthly_anomaly &lt;- group_by(all_data,
 
 ---
 
-## Calculate yearly anomaly
+## Calculate yearly temperature anomalies
 
 
 ```r
@@ -238,7 +243,7 @@ p &lt;- qplot(data=annual_integrated_anomaly,
 print(p)
 ```
 
-![](Bleaching_analysis_xar_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+&lt;img src="Bleaching_analysis_xar_files/figure-html/unnamed-chunk-10-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 

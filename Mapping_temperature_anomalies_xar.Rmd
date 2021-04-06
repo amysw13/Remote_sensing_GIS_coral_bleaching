@@ -1,7 +1,7 @@
 ---
 title: "Mapping temperature anomalies"
 author: "Amy Sing Wong"
-institute: "BS711 Sateliite & GIS analysis"
+institute: "BS711 Satellite & GIS analysis"
 date: "23/03/2021"
 output:
   xaringan::moon_reader:
@@ -49,8 +49,8 @@ rm(list=ls())
 
 Load required packages
 
- - Below is an example code which is useful when sharing code
- - allows new users to check if they have the package before installing and loading
+ - Below is an example of code which is useful when sharing with new users
+ - Allows new users to check if they have the package before installing and loading
 
 ```{r message=FALSE,}
 if(!require(dplyr)){install.packages("dplyr"); library(dplyr)}
@@ -75,11 +75,15 @@ class: inverse, middle, center
 
 ---
 
-## Function to load GIOVANNI files
+## Creating function to load GIOVANNI files
 
 *Part 1:*
 
-Open the function and load the data
+Here we are creating a custom function to load in GIOVANNI data.
+
+- Creating a function called **"read_giovanni_nc_map"**
+- Open function
+- Loading and reading the data
 
 ```{r echo=F}
 #this doesn't show up in the slide! But is split below
@@ -117,34 +121,37 @@ read_giovanni_nc_map <- function(giovanni_nc_map_file){ #<<
 
 ---
 
-## Function to load GIOVANNI files
+## Creating function to load GIOVANNI files
 
 *Part 2:*
 
-Convert its content to a data frame and extract only required information
+- Convert its content to a data frame and extract only required information
 
   - Temperature
   - Latitude
   - Longitude 
 
 ```{r eval=F}
-
+#converting data to dataframe and loading in temperature data
   giovanni_map_dataframe <- as.data.frame(giovanni_map_data[1])
+#loading in the latitude data
   names(giovanni_map_dataframe) <- giovanni_map_data[["lat"]]
+#loading in the longitute data
   giovanni_map_dataframe$lon <- giovanni_map_data[["lon"]]
 ```
 
 ---
 
-## Function to load giovani files
+## Creating function to load GIOVANNI files
 
 *Part 3:*
 
-Switch from a wide matrix format in which values for longitude are given across columns to a long format, with a single temperature measurement per row
+- Switch from a wide matrix format in which values for longitude are given across columns to a long format, with a single temperature measurement per row
 
   - see *?gather* for more details on this function
 
-Close the function
+- Ensure the data is returned 
+- Close the function
 
 ```{r eval=F}
 
@@ -161,7 +168,7 @@ Close the function
 
 ##  GIOVANNI file names
 
-Original GIOVANNA file names are extremely long. 
+Original GIOVANNI file names are extremely long. 
 
 Examples: 
 
