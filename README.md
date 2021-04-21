@@ -101,6 +101,11 @@ description of the research undertaken (60%) - Week 33 – May 17th at
         -   The folder contains all the scripts and example data files.
             **Do not use these example data files to complete your
             assignment.**
+-   **NOTE:** When downloading the GitHub project, you may find the data
+    files don’t download properly. If this happens, you can enter the
+    “data” folder and download the data files individually.
+    -   GIOVANNI files \~22-24 MB
+    -   Time-series example data \~7.7 KB
 
 **Important presentations:**
 
@@ -277,7 +282,8 @@ bleached) reference sites.
     site). Hint: see NOAA Coral Reef Watch:
     <https://coralreefwatch.noaa.gov/index.php>
 
-2.  Note their longitude and latitude.
+2.  Note their longitude and latitude. **BE CAREFUL of different
+    coordinate systems**
 
 3.  Download time series data for 3 sites with 2 areas each - 1 bleached
     coral reef location and 1 reference unbleached coral reef location.
