@@ -11,7 +11,7 @@ rm(list=ls())
 if(!require(dplyr)){install.packages("dplyr"); library(dplyr)}
 if(!require(ggplot2)){install.packages("ggplot2"); library(ggplot2)}
 if(!require(tidyr)){install.packages("tidyr"); library(tidyr)}
-if(!require(scales)){install.packages("scales"); library(scales)}
+if(!require(scales)){install.packages("scales"); library(scales)} #for creating distance scale bars and North pointer
 if(!require(RNetCDF)){install.packages("RNetCDF"); library(RNetCDF)} #to read in .nc files
 if(!require(patchwork)){install.packages("patchwork"); library(patchwork)}
 if(!require(maps)){install.packages("maps"); library(maps)}
@@ -97,7 +97,9 @@ temp_anomaly <- anomaly[anomaly$difference < 3 & anomaly$difference > -3,]
 
 #Download world base map
 
-world <- ne_download( scale = 110, type = 'countries', returnclass = "sf")
+world <- ne_download(scale = 110, type = 'countries', returnclass = "sf", destdir = getwd())
+
+world_2 <- st_read("D:/PhD_Data_2019/ne_50m_land/ne_50m_land.shp")
 
 #check world map
 ggplot()+
@@ -119,12 +121,14 @@ p_map <- ggplot()+
         axis.text = element_text(colour = "green"),
         plot.margin = unit(c(0.25,0.25,0.25,0.25), "cm"))
 
+
 p_map
 
 #Save map - label map appropriately for future reference
 ggsave("./Maps/Example_anomaly_map.png", p_map, 
        bg = "transparent", width = 17, height = 12, 
        units =  "cm", dpi = 300)
+
 
 
 #Save data
@@ -135,3 +139,4 @@ write.csv(temp_anomaly, file = "./Output/long_term_anomaly.csv")
 #### TIPS #######################################
 
 #Use this script to help mapping your site maps 
+
