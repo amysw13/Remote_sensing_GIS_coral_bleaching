@@ -48,7 +48,7 @@ load_giovanni_time <- function(path){
 #### Preparing file for reading in multiple files #############################
 
 #REMINDER: Have you added a "Site" and "Bleached" column to your data? 
-#See step 9. in Part B of data retrival 
+#See step 9. in Part B of data retrieval 
 
 #remember to change file path to where you have saved your data
 

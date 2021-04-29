@@ -190,6 +190,24 @@ Year averaged sea surface temperature
 **Note: You will need to justify your selection of date range (calendar
 year, year centred on bleaching event, month, etc.).**
 
+#### Downloading world base map manually
+
+If the code for downloading a world base map should fail or be
+temporarily be out of use, then we can download this manually.
+
+We can download from
+[Naturalearth](https://www.naturalearthdata.com/downloads/)
+
+Download a physical land vector to your working directory or data
+folder.
+
+Then head to the “Loading\_spatial\_data\_naturalearth.R” file within
+the R folder to get the code to load into R.
+
+**Note: Do not move any of the files within the folder, as you will not
+be able to load the data into R, as the files are dependent on each
+other**
+
 ### Data analyses recommendations
 
 **Part A**
