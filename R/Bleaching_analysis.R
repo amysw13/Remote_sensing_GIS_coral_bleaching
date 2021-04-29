@@ -33,7 +33,7 @@ load_giovanni_time <- function(path){
                         skip=6,
                         col.names = c("Date",
                                       "Temperature",
-                                      "NA",
+                                      "NA", #This col is added, to ensure the data and Temp cols load in properly 
                                       "Site",
                                       "Bleached"))
   
@@ -43,7 +43,12 @@ load_giovanni_time <- function(path){
   return(file_data)
 }
 
+
+
 #### Preparing file for reading in multiple files #############################
+
+#REMINDER: Have you added a "Site" and "Bleached" column to your data? 
+#See step 9. in Part B of data retrival 
 
 #remember to change file path to where you have saved your data
 
