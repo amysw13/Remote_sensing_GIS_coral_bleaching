@@ -81,11 +81,10 @@ context of mass coral bleaching events.**
 Note: There is more information on data analysis and interpretation
 write up under parts A and B.
 
-**Upload to FASER by Friday (week 32) 7th May 4pm 2021.**
+**Upload to FASER by Thursday (week 30) 28th April 2022 by 10:00am.**
 
 **2. Student will then create and present a 15-min (plus questions) oral
-description of the research undertaken (60%) - Week 33 – May 17th at
-11am.**
+description of the research undertaken (60%) - Hand-in: 6th May 2022 at 10:00am. Present on 10th May 2022 at 10:00am**
 
 ## Setup
 
@@ -382,7 +381,7 @@ Your write up is essentially split into 3 sections:
 3.  a discussion of how management strategies may use such information
     and its strengths and weaknesses (\~600 words).
 
-**Upload to Faser by Friday (week 32) 7th May 4pm 2021.**
+**Upload to Faser by Thursday (week 30) 28th April 2022 by 10:00am.**
 
 ## Acknowledgements:
 
