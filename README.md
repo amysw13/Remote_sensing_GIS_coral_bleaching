@@ -84,7 +84,7 @@ write up under parts A and B.
 **Upload to FASER by Thursday (week 30) 28th April 2022 by 10:00am.**
 
 **2. Student will then create and present a 15-min (plus questions) oral
-description of the research undertaken (60%) - Hand-in: 6th May 2022 at 10:00am. Present on 10th May 2022 at 10:00am**
+description of the research undertaken (60%) - Hand-in: Friday (week 31)6th May 2022 at 10:00am. Present on Tuesday (week32) 10th May 2022 at 10:00am**
 
 ## Setup
 
